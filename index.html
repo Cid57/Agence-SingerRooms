@@ -1,193 +1,308 @@
 <!DOCTYPE html>
 <html lang="fr">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <script
-      src="https://kit.fontawesome.com/d8f3c63712.js"
-      crossorigin="anonymous"
-    ></script>
-    <link rel="stylesheet" href="css/style.css" />
-    <link
-      rel="stylesheet"
-      media="only screen and (max-width:500px)"
-      href="/css/style.mobile.css"
-    />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Long+Cang&family=Montserrat:wght@300;400;700&display=swap"
-      rel="stylesheet"
-    />
-    <title>Agence Ledor</title>
-    <style></style>
-  </head>
-  <body>
-    <div class="vp-container">
-      <header>
-        <h2 class="vp-logo">
-          <i class="fa-solid fa-crown"></i>
-          <a href="#">Ledor</a>
-        </h2>
-        <ul>
-          <li><a href="#offer">Nos offres</a></li>
-          <li><a href="#team">Notre équipe</a></li>
-          <li><a href="#contact">Contact</a></li>
-        </ul>
-      </header>
-      <section class="vp">
-        <div class="vp-content">
-          <h1>
-            Un <strong>immobilier</strong> d'exception pour des clients
-            d'exception
-          </h1>
-          <p>
-            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Odit
-            delectus pariatur excepturi deleniti quisquam dolorum odio laborum
-            fuga enim necessitatibus.
-          </p>
-        </div>
-      </section>
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script src="https://kit.fontawesome.com/d8f3c63712.js" crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" media="only screen and (max-width:500px)" href="css/style.mobile.css">
+  <link href="https://fonts.googleapis.com/css2?family=Long+Cang&family=Montserrat:wght@300;400;700&display=swap"
+    rel="stylesheet">
+  <script defer src="./js/main.js"></script>
+  <title>Agence SingerRooms</title>
+</head>
+
+<body>
+  <div class="vp-container">
+    <!-- Header -->
+    <header>
+      <h2 class="vp-logo">
+        <i class="fa-solid fa-crown"></i>
+        <a href="#">SingerRooms</a>
+      </h2>
+      <ul>
+        <li><a href="#offer">Nos offres</a></li>
+        <li><a href="#team">Notre équipe</a></li>
+        <li><a href="#">Inscription</a></li>
+        <li><a href="#">Connexion</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </header>
+
+    <!-- Section VP -->
+    <section class="vp">
+      <div class="vp-content">
+        <h1>Des <strong>chambres</strong> d'exception pour des clients d'exception</h1>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Odit delectus pariatur excepturi deleniti quisquam
+          dolorum odio laborum fuga enim necessitatibus.</p>
+      </div>
+    </section>
+  </div>
+
+  <!-- Section Offres -->
+  <section id="offer" class="offer">
+    <h2 class="title">Nos dernières offres</h2>
+    <div class="container">
+      <div class="search-bar">
+        <input type="text" id="search-input" placeholder="Rechercher par ville..." onkeypress="handleKeyPress(event)">
+        <button onclick="filterOffers()">Rechercher</button>
+      </div>
+      <ul class="offer-list">
+        <li class="offer-elem" data-city="Moriani-Plage">
+          <img src="images/Fior1.jpg" alt="Casa e Natura à Moriani-Plage" class="offer-elem-img">
+          <div class="offer-elem-text">
+            <h3>Casa e Natura</h3>
+            <h4>Moriani-Plage</h4>
+            <p>Chalet Casa T3 (4 personnes)</p>
+            <p>Chalet entier • 2 chambres • 1 salon • 1 salle de bains • 1 cuisine • 34m² • 3 lits</p>
+            <div class="offer-separator"></div>
+            <p>À partir de 150€ la nuit</p>
+            <a href="#"><button class="btn-dispo" type="submit">Voir les disponibilités</button></a>
+          </div>
+        </li>
+
+        <li class="offer-elem" data-city="Erbalunga">
+          <img src="images/Suite1.jpg" alt="Suites in Erbalunga" class="offer-elem-img">
+          <div class="offer-elem-text">
+            <h3>Suites in Erbalunga</h3>
+            <h4>Erbalunga</h4>
+            <p>Appartement 1 Chambre</p>
+            <p>Appartement entier • 1 chambre • 1 salon • 1 salle de bains • 1 cuisine • 65m² • 1 grand lit double</p>
+            <div class="offer-separator"></div>
+            <p>À partir de 140€ la nuit</p>
+            <button class="btn-dispo">Voir les disponibilités</button>
+          </div>
+        </li>
+
+        <li class="offer-elem" data-city="Saint-Florent">
+          <img src="images/Saint-florent.jpg" alt="Résidence Fior di Rena" class="offer-elem-img">
+          <div class="offer-elem-text">
+            <h3>Résidence Fior di Rena</h3>
+            <h4>Saint-Florent</h4>
+            <p>Appartement Standard</p>
+            <p>Appartement entier • 1 chambre • 1 salle de bains • 30m² • 1 lit superposé</p>
+            <div class="offer-separator"></div>
+            <p>À partir de 200€ la nuit</p>
+            <button class="btn-dispo">Voir les disponibilités</button>
+          </div>
+        </li>
+
+        <li class="offer-elem" data-city="Canne">
+          <img src="images/canne.jpg" alt="Village de Vacances Marina d'Oru" class="offer-elem-img">
+          <div class="offer-elem-text">
+            <h3>Village de Vacances Marina d'Oru</h3>
+            <h4>Canne</h4>
+            <p>Studio (2 Adultes)</p>
+            <p>Studio entier • 1 chambre • 1 salle de bains • 30m² • 1 canapé-lit</p>
+            <div class="offer-separator"></div>
+            <p>À partir de 250€ la nuit</p>
+            <button class="btn-dispo">Voir les disponibilités</button>
+          </div>
+        </li>
+
+        <li class="offer-elem" data-city="Occhiatana">
+          <img src="images/marina.jpg" alt="CASA GIABICONI - Villa 6pers" class="offer-elem-img">
+          <div class="offer-elem-text">
+            <h3>CASA GIABICONI - Villa 6pers</h3>
+            <h4>Occhiatana</h4>
+            <p>Villa 3 Chambres</p>
+            <p>Villa entière • 3 chambres • 2 salles de bains • 1 cuisine • 80m² • 3 grands lits doubles</p>
+            <div class="offer-separator"></div>
+            <p>À partir de 95€ la nuit</p>
+            <button class="btn-dispo">Voir les disponibilités</button>
+          </div>
+        </li>
+
+        <!-- Nouveaux éléments d'offre -->
+        <li class="offer-elem" data-city="Bonifacio">
+          <img src="images/bonifacio-1.jpg" alt="Villa Paradiso à Bonifacio" class="offer-elem-img">
+          <div class="offer-elem-text">
+            <h3>Villa Paradiso</h3>
+            <h4>Bonifacio</h4>
+            <p>Villa de Luxe</p>
+            <p>Villa entière • 4 chambres • 1 salon • 3 salles de bains • 1 cuisine • 120m² • 4 lits</p>
+            <div class="offer-separator"></div>
+            <p>À partir de 300€ la nuit</p>
+            <button class="btn-dispo">Voir les disponibilités</button>
+          </div>
+        </li>
+
+        <li class="offer-elem" data-city="Cortina">
+          <img src="images/chalet-1.jpg" alt="Chalet Alpina à Cortina" class="offer-elem-img">
+          <div class="offer-elem-text">
+            <h3>Chalet Alpina</h3>
+            <h4>Cortina</h4>
+            <p>Chalet Familial</p>
+            <p>Chalet entier • 3 chambres • 1 salon • 2 salles de bains • 1 cuisine • 90m² • 3 lits</p>
+            <div class="offer-separator"></div>
+            <p>À partir de 180€ la nuit</p>
+            <button class="btn-dispo">Voir les disponibilités</button>
+          </div>
+        </li>
+
+        <li class="offer-elem" data-city="Lyon">
+          <img src="images/lyon-1.jpg" alt="Appartement Central à Lyon" class="offer-elem-img">
+          <div class="offer-elem-text">
+            <h3>Appartement Central</h3>
+            <h4>Lyon</h4>
+            <p>Appartement Moderne</p>
+            <p>Appartement entier • 2 chambres • 1 salon • 1 salle de bains • 1 cuisine • 70m² • 2 lits</p>
+            <div class="offer-separator"></div>
+            <p>À partir de 120€ la nuit</p>
+            <button class="btn-dispo">Voir les disponibilités</button>
+          </div>
+        </li>
+
+        <li class="offer-elem" data-city="Nice">
+          <img src="images/nice-1.jpg" alt="Suite Panoramique à Nice" class="offer-elem-img">
+          <div class="offer-elem-text">
+            <h3>Suite Panoramique</h3>
+            <h4>Nice</h4>
+            <p>Suite de Luxe</p>
+            <p>Suite entière • 1 chambre • 1 salon • 1 salle de bains • 1 cuisine • 50m² • 1 lit</p>
+            <div class="offer-separator"></div>
+            <p>À partir de 220€ la nuit</p>
+            <button class="btn-dispo">Voir les disponibilités</button>
+          </div>
+        </li>
+
+        <li class="offer-elem" data-city="Bordeaux">
+          <img src="images/bordeaux-1.jpg" alt="Maison de Campagne à Bordeaux" class="offer-elem-img">
+          <div class="offer-elem-text">
+            <h3>Maison de Campagne</h3>
+            <h4>Bordeaux</h4>
+            <p>Maison Familiale</p>
+            <p>Maison entière • 5 chambres • 1 salon • 2 salles de bains • 1 cuisine • 150m² • 5 lits</p>
+            <div class="offer-separator"></div>
+            <p>À partir de 200€ la nuit</p>
+            <button class="btn-dispo">Voir les disponibilités</button>
+          </div>
+        </li>
+
+        <!-- Nouveaux éléments d'offre -->
+        <li class="offer-elem" data-city="Porto-Vecchio">
+          <img src="images/porto-vecchio-1.jpg" alt="Suite Vue Mer à Porto-Vecchio" class="offer-elem-img">
+          <div class="offer-elem-text">
+            <h3>Suite Vue Mer</h3>
+            <h4>Porto-Vecchio</h4>
+            <p>Suite de Luxe</p>
+            <p>Suite entière • 2 chambres • 1 salon • 2 salles de bains • 1 cuisine • 80m² • 2 lits</p>
+            <div class="offer-separator"></div>
+            <p>À partir de 350€ la nuit</p>
+            <button class="btn-dispo">Voir les disponibilités</button>
+          </div>
+        </li>
+
+        <li class="offer-elem" data-city="Porto-Vecchio">
+          <img src="images/porto-vecchio-2.jpg" alt="Suite Panoramique Vue Mer à Porto-Vecchio" class="offer-elem-img">
+          <div class="offer-elem-text">
+            <h3>Suite Panoramique Vue Mer</h3>
+            <h4>Porto-Vecchio</h4>
+            <p>Suite de Luxe</p>
+            <p>Suite entière • 3 chambres • 1 salon • 3 salles de bains • 1 cuisine • 120m² • 3 lits</p>
+            <div class="offer-separator"></div>
+            <p>À partir de 500€ la nuit</p>
+            <button class="btn-dispo">Voir les disponibilités</button>
+          </div>
+        </li>
+      </ul>
     </div>
-    <section id="offer" class="offer">
-      <h2 class="title">Nos dernières offres</h2>
-      <div class="container">
-        <ul class="offer-list">
-          <li class="offer-elem">
-            <img
-              src="images/house-1.jpg"
-              alt="house-1"
-              class="offer-elem-img"
-            />
-            <div class="offer-elem-text">
-              <p>Appartement - Paris 75007</p>
-              <p>11 chambres 450 m²</p>
-              <div class="offer-separator"></div>
-              <p>3 900 000 E</p>
-            </div>
-          </li>
-          <li class="offer-elem">
-            <img
-              src="images/house-2.jpg"
-              alt="house-2"
-              class="offer-elem-img"
-            />
-            <div class="offer-elem-text">
-              <p>Appartement - Paris 75007</p>
-              <p>8 chambres 450 m²</p>
-              <div class="offer-separator"></div>
-              <p>3 950 000 E</p>
-            </div>
-          </li>
-          <li class="offer-elem">
-            <img
-              src="images/house-3.jpg"
-              alt="house-3"
-              class="offer-elem-img"
-            />
-            <div class="offer-elem-text">
-              <p>Appartement - Paris 75007</p>
-              <p>5 chambres 400 m²</p>
-              <div class="offer-separator"></div>
-              <p>3 700 000 E</p>
-            </div>
-          </li>
-        </ul>
-      </div>
-    </section>
-    <section id="team" class="who">
-      <div class="who-content-img">
-        <img src="images/team.jpg" alt="team" />
-      </div>
-      <div class="who-content-text bg-dark">
-        <h2>
-          Une équipe de <strong>professionnels</strong> avec plus de 10 ans
-          d'expérience
-        </h2>
-        <p>
-          Lorem, ipsum dolor sit amet consectetur adipisicing elit. Corrupti
-          atque reprehenderit quisquam eligendi? Nihil placeat adipisci nemo.
-          Enim rem debitis, nisi blanditiis aliquam maxime ratione quas
-          praesentium velit nam voluptatum commodi perferendis recusandae dolore
-          odio placeat repudiandae aut. Possimus est fuga repellendus facilis,
-          iste similique aspernatur voluptatem quidem natus harum.
-        </p>
-      </div>
-    </section>
-    <section class="testimonials">
-      <div class="container">
-        <div class="testimonials-content">
-          <h2 class="title">Ecoutez ce qu'ils pensent de nous</h2>
-          <div class="testimonials-elem">
-            <div class="testimonials-elem-text">
-              <p>
-                <i class="fa-solid fa-quotes"></i>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Nisi
-                cum voluptatibus, dolor vero dolorum similique cumque blanditiis
-                odio facilis. Impedit exercitationem nostrum, expedita officiis
-                cumque ex sapiente ducimus consequatur sit.
-                <i class="fa-solid fa-quote-right"></i>
-              </p>
-            </div>
-            <div class="testimonials-elem-profil">
-              <img src="images/person-1.jpg" alt="person-1" />
-              <p>Nadège</p>
-              <em>Technicien industriel</em>
-            </div>
+  </section>
+
+  <!-- Section Équipe -->
+  <section id="team" class="who">
+    <div class="who-content-img">
+      <img src="images/team.jpg" alt="Notre équipe">
+    </div>
+    <div class="who-content-text bg-dark">
+      <h2>Une équipe de <strong>professionnels</strong> avec plus de 10 ans d'expérience</h2>
+      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Corrupti atque reprehenderit quisquam eligendi? Nihil
+        placeat adipisci nemo. Enim rem debitis, nisi blanditiis aliquam maxime ratione quas praesentium velit nam
+        voluptatum commodi perferendis recusandae dolore odio placeat repudiandae aut. Possimus est fuga repellendus
+        facilis, iste similique aspernatur voluptatem quidem natus harum.</p>
+    </div>
+  </section>
+
+  <!-- Section Témoignages -->
+  <section class="testimonials">
+    <div class="container">
+      <div class="testimonials-content">
+        <h2 class="title">Écoutez ce qu'ils pensent de nous</h2>
+        <div class="testimonials-elem">
+          <div class="testimonials-elem-profil">
+            <img src="images/person-1.jpg" alt="Lionel">
+            <p>Lionel</p>
+            <em>Technicien industriel</em>
           </div>
-          <div class="testimonials-elem">
-            <div class="testimonials-elem-text">
-              <p>
-                <i class="fa-solid fa-quotes"></i>
-                Lorem ipsum, dolor sit amet consectetur adipisicing elit. Vitae,
-                laudantium?
-                <i class="fa-solid fa-quote-right"></i>
-              </p>
-            </div>
-            <div class="testimonials-elem-profil">
-              <img src="images/person-2.jpg" alt="person-2" />
-              <p>Steph</p>
-              <em>Marketing digital</em>
-            </div>
+          <div class="testimonials-elem-text">
+            <p>
+              <i class="fa-solid fa-quotes"></i>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Nisi cum voluptatibus, dolor vero dolorum
+              similique cumque blanditiis odio facilis. Impedit exercitationem nostrum, expedita officiis cumque ex
+              sapiente ducimus consequatur sit.
+              <i class="fa-solid fa-quote-right"></i>
+            </p>
           </div>
-          <div class="testimonials-elem">
-            <div class="testimonials-elem-text">
-              <p>
-                <i class="fa-solid fa-quotes"></i>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Eum
-                enim ullam ab explicabo quo dolore earum praesentium consectetur
-                repellat maxime deleniti repellendus autem non voluptas
-                possimus, doloremque asperiores magnam sequi eveniet ipsam
-                dolores rem delectus ratione. Rem facere dolore aliquid.
-                <i class="fa-solid fa-quote-right"></i>
-              </p>
-            </div>
-            <div class="testimonials-elem-profil">
-              <img src="images/person-3.jpg" alt="person-3" />
-              <p>Clémence</p>
-              <em>Infirmière</em>
-            </div>
+        </div>
+
+        <div class="testimonials-elem">
+          <div class="testimonials-elem-profil">
+            <img src="images/person-2.jpg" alt="Steph">
+            <p>Steph</p>
+            <em>Marketing digital</em>
+          </div>
+          <div class="testimonials-elem-text">
+            <p>
+              <i class="fa-solid fa-quotes"></i>
+              Lorem ipsum, dolor sit amet consectetur adipisicing elit. Vitae, laudantium?
+              <i class="fa-solid fa-quote-right"></i>
+            </p>
+          </div>
+        </div>
+
+        <div class="testimonials-elem">
+          <div class="testimonials-elem-profil">
+            <img src="images/person-3.jpg" alt="Clémence">
+            <p>Clémence</p>
+            <em>Infirmière</em>
+          </div>
+          <div class="testimonials-elem-text">
+            <p>
+              <i class="fa-solid fa-quotes"></i>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Eum enim ullam ab explicabo quo dolore earum
+              praesentium consectetur repellat maxime deleniti repellendus autem non voluptas possimus, doloremque
+              asperiores magnam sequi eveniet ipsam dolores rem delectus ratione. Rem facere dolore aliquid.
+              <i class="fa-solid fa-quote-right"></i>
+            </p>
           </div>
         </div>
       </div>
-    </section>
-    <section id="contact" class="contact bg-dark">
-      <form action="#" class="contact-form">
-        <h2 class="title">Pour nous<strong>contacter</strong></h2>
-        <input type="text" placeholder="Nom" name="name" id="name" />
-        <input type="email" placeholder="Email" name="email" id="email" />
-        <input
-          type="text"
-          placeholder="Votre message..."
-          name="message"
-          id="message"
-        />
-        <div>
-          <button>Soumettre</button>
-        </div>
-      </form>
-    </section>
-    <footer>
-      <p>Copyright 2023</p>
-    </footer>
-  </body>
+    </div>
+  </section>
+
+  <!-- Section Contact -->
+  <section id="contact" class="contact bg-dark">
+    <form action="#" class="contact-form">
+      <h2 class="title">Pour nous <strong>contacter</strong></h2>
+      <label for="name">Nom</label>
+      <input type="text" placeholder="Nom" name="name" id="name" required>
+      <label for="email">Email</label>
+      <input type="email" placeholder="Email" name="email" id="email" required>
+      <label for="message">Votre message</label>
+      <textarea placeholder="Votre message..." name="message" id="message" required></textarea>
+      <div>
+        <button type="submit">Soumettre</button>
+      </div>
+    </form>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <p>Copyright 2024 by Singer Cindy</p>
+  </footer>
+
+</body>
+
 </html>
