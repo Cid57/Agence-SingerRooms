@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://kit.fontawesome.com/d8f3c63712.js" crossorigin="anonymous"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Long+Cang&family=Montserrat:wght@300;400;700&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="./css/offre-1.css">
+    <link rel="stylesheet" href="./css/style.css">
+    <title>Casa e Natura à Moriani-Plage</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: "Montserrat", sans-serif;
+            background: #f4f4f4;
+            color: #333;
+        }
+
+        header {
+            background: #333;
+            display: flex;
+            flex-flow: row nowrap;
+            justify-content: space-between;
+            color: white;
+        }
+
+
+        header ul {
+            display: flex;
+            list-style: none;
+        }
+
+        header ul li {
+            padding: 10px;
+        }
+
+        header a {
+            color: white;
+            text-decoration: none;
+        }
+
+
+        footer {
+            background: #444;
+            color: white;
+            text-align: center;
+            padding: 20px 0;
+            margin-top: auto;
+
+        }
+
+
+        .container {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+
+        .btn-dispo,
+        button {
+            padding: 10px 20px;
+            background-color: rgb(194, 56, 187);
+            color: white;
+            border: none;
+            border-radius: 5px;
+            font-size: 1rem;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        .btn-dispo:hover,
+        button:hover {
+            background-color: purple;
+        }
+
+
+        .offer-details {
+            max-width: 800px;
+            margin: 40px auto;
+            padding: 20px;
+            background: #fff;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            border-radius: 10px;
+        }
+
+        .offer-gallery {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 10px;
+            margin-bottom: 20px;
+        }
+
+        .offer-gallery img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+            border-radius: 5px;
+        }
+
+        .offer-description {
+            font-size: 1.1rem;
+            line-height: 1.8;
+            color: #666;
+        }
+
+        .offer-description p {
+            margin-bottom: 1rem;
+        }
+
+        @media (max-width: 768px) {
+            .offer-gallery {
+                grid-template-columns: 1fr;
+
+            }
+
+            .offer-details {
+                padding: 10px;
+
+            }
+        }
+
+        .buttons-container {
+            display: flex;
+            justify-content: space-around;
+            /* Ajustez cette propriété selon vos préférences */
+            align-items: center;
+            margin-top: 20px;
+            flex-wrap: wrap;
+            /* Permet aux boutons de se placer sur des lignes séparées sur les petits écrans */
+        }
+
+        .btn-retour,
+        button {
+            padding: 10px 15px;
+            background-color: rgb(194, 56, 187);
+            color: white;
+            border-radius: 5px;
+            text-decoration: none;
+            font-size: 1rem;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+            margin: 5px;
+            /* Espacement uniforme autour des boutons */
+            border: none;
+        }
+
+        .btn-retour:hover,
+        button:hover {
+            background-color: purple;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Header -->
+    <header>
+        <h2 class="vp-logo">
+            <i class="fa-solid fa-crown"></i>
+            <a href="#">SingerRooms</a>
+        </h2>
+
+    </header>
+
+    <section class="offer-details">
+        <h1>Casa e Natura à Moriani-Plage</h1>
+        <div class="offer-gallery">
+            <img src="images/offre-1/moriani-1.jpg" alt="Image 1">
+            <img src="images/offre-1/moriani-2.jpg" alt="Image 2">
+            <img src="images/offre-1/moriani-3.jpg" alt="Image 3">
+        </div>
+        <div class="offer-description">
+            <p>Chalet Casa T3 (4 personnes)</p>
+            <p>Chalet entier • 2 chambres • 1 salon • 1 salle de bains • 1 cuisine • 34m² • 3 lits</p>
+            <p>À partir de 150€ la nuit</p>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer nec odio. Praesent libero. Sed cursus
+                ante dapibus diam.</p>
+        </div>
+
+        <div class="buttons-container">
+            <button>Cliquez ici pour voir les disponibilités</button>
+            <a href="index.html#offer" class="btn-retour">Retour aux offres</a>
+        </div>
+
+    </section>
+
+
+    <footer>
+        <p>Copyright 2024 by Singer Cindy</p>
+    </footer>
+</body>
+
+</html>
